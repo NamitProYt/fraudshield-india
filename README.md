@@ -8,7 +8,7 @@
 Built by **Team Quad Core** for **Hack the Circle 2026** (MAIT Delhi, Open Circle).
 **Track:** AI/ML & Cybersecurity · **License:** MIT
 
-📄 Presentation: [`docs/FraudShield-India-presentation.pdf`](docs/FraudShield-India-presentation.pdf)
+📄 Presentation: [`FraudShield-India-presentation.pdf`](FraudShield-India-presentation.pdf)
 
 ---
 
@@ -82,7 +82,8 @@ engine/       rule engine and risk scoring (Engine 1)
 rules/        scam_rules.json, the community-maintained rule set
 data/         synthetic sample messages used by the tests
 tests/        automated tests
-docs/         presentation and diagrams
+FraudShield-India-presentation.pdf   Round 1 presentation (this folder)
+docs/         diagrams and extra documentation
 extension/    Chrome extension (planned)
 ```
 
