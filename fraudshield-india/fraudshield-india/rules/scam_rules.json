@@ -1,0 +1,69 @@
+{
+  "version": "0.1.0",
+  "description": "Rule set for FraudShield India. Add new scam phrases here via pull request. Use synthetic examples only.",
+  "thresholds": { "caution": 30, "danger": 60 },
+  "categories": {
+    "authority": {
+      "weight": 25,
+      "label": "Claims to be from a government agency or police",
+      "terms": [
+        "cbi", "central bureau of investigation", "enforcement directorate",
+        "police", "cyber crime", "cybercrime", "customs", "narcotics",
+        "ncb", "trai", "income tax department", "supreme court", "rbi"
+      ]
+    },
+    "identity_hook": {
+      "weight": 15,
+      "label": "Mentions your ID, SIM or a parcel as the hook",
+      "terms": [
+        "aadhaar", "aadhar", "pan card", "sim card", "parcel", "courier",
+        "fedex", "passport", "customs clearance"
+      ]
+    },
+    "threat": {
+      "weight": 25,
+      "label": "Uses threats of arrest or legal action",
+      "terms": [
+        "arrest", "arrested", "money laundering", "warrant", "fir",
+        "case registered", "seized", "illegal", "drugs", "legal action",
+        "your account will be blocked", "face action"
+      ]
+    },
+    "urgency": {
+      "weight": 20,
+      "label": "Creates artificial urgency or secrecy",
+      "terms": [
+        "call now", "call immediately", "immediately", "urgent",
+        "within 24 hours", "last warning", "do not tell anyone",
+        "don't tell anyone", "stay on the video call", "stay on video call",
+        "do not disconnect"
+      ]
+    },
+    "payment": {
+      "weight": 25,
+      "label": "Pushes you to send money or reveal payment details",
+      "terms": [
+        "safe account", "verification fee", "pay the fine", "pay fine",
+        "security deposit", "transfer the amount", "transfer money",
+        "refund", "clearance fee"
+      ]
+    }
+  },
+  "phrases": [
+    { "name": "digital_arrest", "weight": 60, "label": "Mentions 'digital arrest', which does not exist in Indian law", "terms": ["digital arrest"] }
+  ],
+  "patterns": [
+    {
+      "name": "apk_link",
+      "weight": 40,
+      "label": "Contains a link to an unverified .apk file",
+      "regex": "https?://\\S+\\.apk\\b"
+    },
+    {
+      "name": "pin_request",
+      "weight": 30,
+      "label": "Asks you to share or enter your PIN",
+      "regex": "\\b(share|enter|send|provide)\\b.{0,25}\\b(upi pin|atm pin|pin)\\b"
+    }
+  ]
+}

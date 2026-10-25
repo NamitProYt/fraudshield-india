@@ -1,0 +1,11 @@
+message,expected_level
+"CBI Notice: Your Aadhaar is linked to money laundering. Call now or face arrest.",danger
+"You are under digital arrest. Stay on the video call and do not tell anyone.",danger
+"The Enforcement Directorate has issued a warrant in your name. Transfer money to the safe account immediately.",danger
+"Download the CBI verification app from http://example.test/cbi.apk to clear your case.",danger
+"Your parcel could not be delivered. Pay a verification fee to reschedule.",caution
+"Hi, are we meeting at 6 for the hackathon prep?",safe
+"Your bank statement for September is ready to view in the app.",safe
+"Your OTP for login is 482913. Do not share it with anyone.",safe
+"Your order will be delivered today by 6 PM. Track it in the app.",safe
+"Please confirm your attendance for tomorrow's lab session.",safe
